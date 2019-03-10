@@ -28,12 +28,20 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
+<<<<<<< HEAD
 						"nFunction",
+=======
+						"nAPI",
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 						{
 							"Fn::Join": [
 								"",
 								[
+<<<<<<< HEAD
 									"nFunction",
+=======
+									"nAPI",
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 									"-",
 									{
 										"Ref": "env"
@@ -59,8 +67,13 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
+<<<<<<< HEAD
 					"S3Bucket": "reactsandbox-20190310193917-deployment",
 					"S3Key": "amplify-builds/nAPI-1552227673-latest-build.zip"
+=======
+					"S3Bucket": "reactsandbox-20190310130954-deployment",
+					"S3Key": "amplify-builds/nAPI-1552212565-latest-build.zip"
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 				}
 			}
 		},
@@ -70,12 +83,20 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
+<<<<<<< HEAD
 						"reactsandboxLambdaRole107c88af",
+=======
+						"reactsandboxLambdaRole89df8d9b",
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 						{
 							"Fn::Join": [
 								"",
 								[
+<<<<<<< HEAD
 									"reactsandboxLambdaRole107c88af",
+=======
+									"reactsandboxLambdaRole89df8d9b",
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 									"-",
 									{
 										"Ref": "env"

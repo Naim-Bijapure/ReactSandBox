@@ -88,7 +88,11 @@
             ],
             "paths": {
               
+<<<<<<< HEAD
               "/data": {
+=======
+              "/pictures": {
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
                 "options": {
                   "consumes": [
                     "application/json"
@@ -187,7 +191,11 @@
                   }
                 }
               },
+<<<<<<< HEAD
               "/data/{proxy+}": {
+=======
+              "/pictures/{proxy+}": {
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
                 "options": {
                   "consumes": [
                     "application/json"
@@ -365,7 +373,11 @@
         
         
         
+<<<<<<< HEAD
       "DeploymentAPIGWnAPI": {
+=======
+      "DeploymentAPIGWnAPIe6c1c25c": {
+>>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
