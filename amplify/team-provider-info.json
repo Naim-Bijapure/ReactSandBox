@@ -1,0 +1,14 @@
+{
+    "react": {
+        "awscloudformation": {
+            "AuthRoleName": "reactsandbox-20190310130954-authRole",
+            "UnauthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310130954-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310130954-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "reactsandbox-20190310130954-deployment",
+            "UnauthRoleName": "reactsandbox-20190310130954-unauthRole",
+            "StackName": "reactsandbox-20190310130954",
+            "StackId": "arn:aws:cloudformation:us-east-1:236763488738:stack/reactsandbox-20190310130954/b3a81540-4307-11e9-be6c-0afcd132dcac"
+        }
+    }
+}

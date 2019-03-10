@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/pictures",
+            "lambdaFunction": "nAPI",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "nAPI",
+    "apiName": "nAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "nAPI"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "reactsandbox-20190310130954-authRole",
+        "unAuthRoleName": "reactsandbox-20190310130954-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "nAPI",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "e6c1c25c"
+}
