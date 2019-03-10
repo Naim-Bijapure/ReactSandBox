@@ -112329,22 +112329,23 @@ function (_Component) {
   }, {
     key: "run",
     value: function run() {
-      console.log('clicked'); //       API.post('nAPI', '/pictures',{body:{number:20}})
-      //   .then(data => console.log('data: ', data))
-      //   .catch(err => console.log('error:', err))
+      console.log('clicked');
 
-      fetch('http://localhost:3000/items', {
-        method: 'POST',
+      _awsAmplify.API.post('nAPI', '/items', {
         body: {
-          number: 25
+          number: 20
         }
       }).then(function (data) {
-        return data.json();
-      }).then(function (data) {
-        console.log(data);
+        return console.log('data: ', data);
       }).catch(function (err) {
-        console.log(err);
-      });
+        return console.log('error:', err);
+      }); // fetch('http://localhost:3000/items',{method:'POST',body:{number:25}})
+      //                     .then(data=>(data.json()))
+      //                     .then((data)=>{console.log(data)
+      //                     })
+      //                     .catch((err)=>{console.log(err)
+      //                     });
+
     }
   }]);
 
@@ -112410,7 +112411,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45875" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

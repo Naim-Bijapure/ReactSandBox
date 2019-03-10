@@ -23,16 +23,16 @@ import { withAuthenticator } from 'aws-amplify-react';
         
    run(){
        console.log('clicked');
-//       API.post('nAPI', '/pictures',{body:{number:20}})
-//   .then(data => console.log('data: ', data))
-//   .catch(err => console.log('error:', err))
+      API.post('nAPI', '/items',{body:{number:20}})
+  .then(data => console.log('data: ', data))
+  .catch(err => console.log('error:', err))
 
-fetch('http://localhost:3000/items',{method:'POST',body:{number:25}})
-                    .then(data=>(data.json()))
-                    .then((data)=>{console.log(data)
-                    })
-                    .catch((err)=>{console.log(err)
-                    });
+// fetch('http://localhost:3000/items',{method:'POST',body:{number:25}})
+//                     .then(data=>(data.json()))
+//                     .then((data)=>{console.log(data)
+//                     })
+//                     .catch((err)=>{console.log(err)
+//                     });
    
 
 }
