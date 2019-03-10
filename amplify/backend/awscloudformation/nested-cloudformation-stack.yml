@@ -81,16 +81,16 @@
 		"functionnAPI": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/function/nAPI-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/function/nAPI-cloudformation-template.json",
 				"Parameters": {
-					"env": "react"
+					"env": "serverless"
 				}
 			}
 		},
 		"apinAPI": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/api/nAPI-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/api/nAPI-cloudformation-template.json",
 				"Parameters": {
 					"authRoleName": {
 						"Ref": "AuthRoleName"
@@ -110,17 +110,17 @@
 							"Outputs.Arn"
 						]
 					},
-					"env": "react"
+					"env": "serverless"
 				}
 			}
 		},
 		"hostingS3AndCloudFront": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/hosting/template.json",
+				"TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/hosting/template.json",
 				"Parameters": {
-					"bucketName": "pronoob-serverless",
-					"env": "react"
+					"bucketName": "n-serverless",
+					"env": "serverless"
 				}
 			}
 		}

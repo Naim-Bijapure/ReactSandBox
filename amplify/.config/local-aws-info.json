@@ -1,5 +1,5 @@
 {
-    "react": {
+    "serverless": {
         "configLevel": "project",
         "useProfile": true,
         "profileName": "Naim7407"

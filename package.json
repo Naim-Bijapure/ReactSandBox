@@ -13,6 +13,8 @@
     "pnp": false
   },
   "dependencies": {
+    "aws-amplify": "^1.1.22",
+    "aws-amplify-react": "^2.3.2",
     "parcel": "^1.12.0",
     "parcel-bundler": "^1.12.0",
     "react": "^16.8.4",
