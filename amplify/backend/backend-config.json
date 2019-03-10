@@ -23,9 +23,15 @@
 			]
 		}
 	},
+<<<<<<< HEAD
 	"auth": {
 		"cognitofc760924": {
 			"service": "Cognito",
+=======
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+>>>>>>> serverless-amplify
 			"providerPlugin": "awscloudformation"
 		}
 	}
