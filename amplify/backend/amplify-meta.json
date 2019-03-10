@@ -1,0 +1,84 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "reactsandbox-20190310130954-authRole",
+			"UnauthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310130954-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310130954-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "reactsandbox-20190310130954-deployment",
+			"UnauthRoleName": "reactsandbox-20190310130954-unauthRole",
+			"StackName": "reactsandbox-20190310130954",
+			"StackId": "arn:aws:cloudformation:us-east-1:236763488738:stack/reactsandbox-20190310130954/b3a81540-4307-11e9-be6c-0afcd132dcac"
+		}
+	},
+	"function": {
+		"nAPI": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2019-03-10T08:33:53.547Z",
+			"lastPackageTimeStamp": "2019-03-10T10:09:27.586Z",
+			"distZipFilename": "nAPI-1552212565-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/function/nAPI-cloudformation-template.json",
+				"logicalId": "functionnAPI"
+			},
+			"lastPushTimeStamp": "2019-03-10T13:55:07.030Z",
+			"output": {
+				"Region": "us-east-1",
+				"Arn": "arn:aws:lambda:us-east-1:236763488738:function:nAPI-react",
+				"Name": "nAPI-react"
+			},
+			"lastPushDirHash": "jGgHSpe02rz7ZjWILZIS5dYEWpc="
+		}
+	},
+	"api": {
+		"nAPI": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "nAPI",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/api/nAPI-cloudformation-template.json",
+				"logicalId": "apinAPI"
+			},
+			"lastPushTimeStamp": "2019-03-10T13:55:07.032Z",
+			"output": {
+				"ApiName": "nAPI",
+				"RootUrl": "https://aswacb6ln9.execute-api.us-east-1.amazonaws.com/react"
+			},
+			"lastPushDirHash": "h0LoPVfjZKNEAfxEHpY/8GRcXo4="
+		}
+	},
+	"auth": {},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310130954-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-03-10T13:55:07.039Z",
+			"output": {
+				"CloudFrontSecureURL": "https://d24mo18wp5yd2g.cloudfront.net",
+				"S3BucketSecureURL": "https://pronoob-serverless-react.s3.amazonaws.com",
+				"WebsiteURL": "http://pronoob-serverless-react.s3-website-us-east-1.amazonaws.com",
+				"CloudFrontDistributionID": "EF3XC5GHAR85Z",
+				"Region": "us-east-1",
+				"HostingBucketName": "pronoob-serverless-react",
+				"CloudFrontDomainName": "d24mo18wp5yd2g.cloudfront.net"
+			},
+			"lastPushDirHash": "d+dyOcQtga+aiZsovUuwiyS2OlY="
+		}
+	}
+}
