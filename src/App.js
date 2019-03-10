@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 import Amplify, { API } from 'aws-amplify';
+
+import { withAuthenticator } from 'aws-amplify-react'; 
 // import awsmobile from './aws-exports';
 
-export default class App extends Component {
+ class App extends Component {
    constructor(props){
        super(props);
        this.run= this.run.bind(this);
@@ -35,3 +37,5 @@ fetch('http://localhost:3000/items',{method:'POST',body:{number:25}})
 
 }
 }
+
+export default App;

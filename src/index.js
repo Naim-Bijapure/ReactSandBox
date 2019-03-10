@@ -5,7 +5,7 @@ import awsmobile from './aws-exports';
 
 import App from './App';
 
-ReactDOM.render(<App/>,document.getElementById("app"));
+ReactDOM.render(<App />,document.getElementById("app"));
 if (module.hot) {
   module.hot.dispose(function() {
     // module is about to be replaced
