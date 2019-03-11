@@ -46,10 +46,6 @@
                         }
                     ]
                 },
-<<<<<<< HEAD
-                "AccessControl": "Private",
-=======
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
                 "WebsiteConfiguration": {
                     "IndexDocument": "index.html",
                     "ErrorDocument": "index.html"
@@ -72,8 +68,6 @@
                     ]
                 }
             }
-<<<<<<< HEAD
-=======
         },
         "PrivateBucketPolicy": {
             "Type": "AWS::S3::BucketPolicy",
@@ -199,7 +193,6 @@
                     ]
                 }
             }
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
         }
     },
     "Outputs": {
@@ -239,8 +232,6 @@
                 ]
             },
             "Description": "Name of S3 bucket to hold website content"
-<<<<<<< HEAD
-=======
         },
         "CloudFrontDistributionID": {
             "Value": {
@@ -270,7 +261,6 @@
                     ]
                 ]
             }
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
         }
     }
 }

@@ -1,28 +1,14 @@
 {
-<<<<<<< HEAD
-  "name": "nFunction",
-=======
   "name": "nAPI",
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "aws-serverless-express": "^3.3.5",
-<<<<<<< HEAD
     "body-parser": "^1.17.1",
     "express": "^4.15.2"
   },
   "devDependencies": {},
-=======
-    "axios": "^0.18.0",
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2"
-  },
-  "devDependencies": {
-    "cors": "^2.8.5"
-  },
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

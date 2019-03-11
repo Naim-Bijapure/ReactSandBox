@@ -1,7 +1,3 @@
 {
-<<<<<<< HEAD
-    "bucketName": "n-serverless"
-=======
-    "bucketName": "pronoob-serverless"
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
+    "bucketName": "amplify-hosting"
 }

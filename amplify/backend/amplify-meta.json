@@ -1,80 +1,62 @@
 {
-	"providers": {
-		"awscloudformation": {
-			"AuthRoleName": "reactsandbox-20190310193917-authRole",
-			"UnauthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310193917-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310193917-authRole",
-			"Region": "us-east-1",
-			"DeploymentBucketName": "reactsandbox-20190310193917-deployment",
-			"UnauthRoleName": "reactsandbox-20190310193917-unauthRole",
-			"StackName": "reactsandbox-20190310193917",
-			"StackId": "arn:aws:cloudformation:us-east-1:236763488738:stack/reactsandbox-20190310193917/18eb7bf0-433e-11e9-913e-120261667484"
-		}
-	},
-	"function": {
-		"nAPI": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [],
-			"lastBuildTimeStamp": "2019-03-10T14:21:13.949Z",
-			"lastPackageTimeStamp": "2019-03-10T14:21:16.153Z",
-			"distZipFilename": "nAPI-1552227673-latest-build.zip",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/function/nAPI-cloudformation-template.json",
-				"logicalId": "functionnAPI"
-			},
-			"lastPushTimeStamp": "2019-03-10T14:39:08.585Z",
-			"output": {
-				"Region": "us-east-1",
-				"Arn": "arn:aws:lambda:us-east-1:236763488738:function:nFunction-serverless",
-				"Name": "nFunction-serverless"
-			},
-			"lastPushDirHash": "/1BDuIL3zridbB3Tk3K58h1s41U="
-		}
-	},
-	"api": {
-		"nAPI": {
-			"service": "API Gateway",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "function",
-					"resourceName": "nAPI",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			],
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/api/nAPI-cloudformation-template.json",
-				"logicalId": "apinAPI"
-			},
-			"lastPushTimeStamp": "2019-03-10T14:39:08.589Z",
-			"output": {
-				"ApiName": "nAPI",
-				"RootUrl": "https://bzclj8rbch.execute-api.us-east-1.amazonaws.com/serverless"
-			},
-			"lastPushDirHash": "lfeawtA1pEJGmMs9YbFJW/w8qvc="
-		}
-	},
-	"hosting": {
-		"S3AndCloudFront": {
-			"service": "S3AndCloudFront",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310193917-deployment/amplify-cfn-templates/hosting/template.json",
-				"logicalId": "hostingS3AndCloudFront"
-			},
-			"lastPushTimeStamp": "2019-03-10T14:39:08.594Z",
-			"output": {
-				"S3BucketSecureURL": "https://n-serverless-serverless.s3.amazonaws.com",
-				"WebsiteURL": "http://n-serverless-serverless.s3-website-us-east-1.amazonaws.com",
-				"Region": "us-east-1",
-				"HostingBucketName": "n-serverless-serverless"
-			},
-			"lastPushDirHash": "dmvP08YZmZosSxu8Q1jxiMkmeIY="
-		}
-	}
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "reactsandbox-20190310205537-authRole",
+            "UnauthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310205537-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::236763488738:role/reactsandbox-20190310205537-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "reactsandbox-20190310205537-deployment",
+            "UnauthRoleName": "reactsandbox-20190310205537-unauthRole",
+            "StackName": "reactsandbox-20190310205537",
+            "StackId": "arn:aws:cloudformation:us-east-1:236763488738:stack/reactsandbox-20190310205537/c2896000-4348-11e9-88f3-0a82639e0346"
+        }
+    },
+    "function": {
+        "nAPI": {
+            "service": "Lambda",
+            "providerPlugin": "awscloudformation",
+            "build": true,
+            "dependsOn": [],
+            "lastBuildTimeStamp": "2019-03-10T15:27:58.348Z",
+            "lastPackageTimeStamp": "2019-03-10T15:27:59.759Z",
+            "distZipFilename": "nAPI-1552231678-latest-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310205537-deployment/amplify-cfn-templates/function/nAPI-cloudformation-template.json",
+                "logicalId": "functionnAPI"
+            },
+            "lastPushTimeStamp": "2019-03-10T16:28:16.836Z"
+        }
+    },
+    "api": {
+        "nAPI": {
+            "service": "API Gateway",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "nAPI",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                }
+            ],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310205537-deployment/amplify-cfn-templates/api/nAPI-cloudformation-template.json",
+                "logicalId": "apinAPI"
+            },
+            "lastPushTimeStamp": "2019-03-10T16:28:17.105Z"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/reactsandbox-20190310205537-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2019-03-10T16:28:16.804Z"
+        }
+    }
 }

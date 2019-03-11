@@ -1,11 +1,7 @@
 {
     "paths": [
         {
-<<<<<<< HEAD
             "name": "/data",
-=======
-            "name": "/pictures",
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
             "lambdaFunction": "nAPI",
             "privacy": {
                 "open": true
@@ -22,13 +18,8 @@
     "privacy": {
         "auth": 0,
         "unauth": 0,
-<<<<<<< HEAD
-        "authRoleName": "reactsandbox-20190310193917-authRole",
-        "unAuthRoleName": "reactsandbox-20190310193917-unauthRole"
-=======
-        "authRoleName": "reactsandbox-20190310130954-authRole",
-        "unAuthRoleName": "reactsandbox-20190310130954-unauthRole"
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
+        "authRoleName": "reactsandbox-20190310205537-authRole",
+        "unAuthRoleName": "reactsandbox-20190310205537-unauthRole"
     },
     "dependsOn": [
         {
@@ -39,10 +30,5 @@
                 "Arn"
             ]
         }
-<<<<<<< HEAD
     ]
-=======
-    ],
-    "uuid": "e6c1c25c"
->>>>>>> 1ec804ca1607350df5e0d61ffabfcf206ba76b16
 }
