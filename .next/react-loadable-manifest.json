@@ -6,5 +6,277 @@
       "file": "static/chunks/0.js",
       "publicPath": "static/chunks/0.js"
     }
+  ],
+  "../../core-js/array/from": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/core-js/array/from.js",
+      "name": "./node_modules/@babel/runtime-corejs2/core-js/array/from.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../../core-js/is-iterable": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js",
+      "name": "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "@babel/runtime-corejs2/core-js/set": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/core-js/set.js",
+      "name": "./node_modules/@babel/runtime-corejs2/core-js/set.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./arrayWithoutHoles": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js",
+      "name": "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./iterableToArray": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js",
+      "name": "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./nonIterableSpread": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js",
+      "name": "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "@babel/runtime-corejs2/helpers/esm/toConsumableArray": [
+    {
+      "id": "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js",
+      "name": "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "core-js/library/fn/array/from": [
+    {
+      "id": "./node_modules/core-js/library/fn/array/from.js",
+      "name": "./node_modules/core-js/library/fn/array/from.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "core-js/library/fn/is-iterable": [
+    {
+      "id": "./node_modules/core-js/library/fn/is-iterable.js",
+      "name": "./node_modules/core-js/library/fn/is-iterable.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "core-js/library/fn/set": [
+    {
+      "id": "./node_modules/core-js/library/fn/set.js",
+      "name": "./node_modules/core-js/library/fn/set.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_array-from-iterable": [
+    {
+      "id": "./node_modules/core-js/library/modules/_array-from-iterable.js",
+      "name": "./node_modules/core-js/library/modules/_array-from-iterable.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_array-methods": [
+    {
+      "id": "./node_modules/core-js/library/modules/_array-methods.js",
+      "name": "./node_modules/core-js/library/modules/_array-methods.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_array-species-constructor": [
+    {
+      "id": "./node_modules/core-js/library/modules/_array-species-constructor.js",
+      "name": "./node_modules/core-js/library/modules/_array-species-constructor.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_array-species-create": [
+    {
+      "id": "./node_modules/core-js/library/modules/_array-species-create.js",
+      "name": "./node_modules/core-js/library/modules/_array-species-create.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_collection-strong": [
+    {
+      "id": "./node_modules/core-js/library/modules/_collection-strong.js",
+      "name": "./node_modules/core-js/library/modules/_collection-strong.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_collection-to-json": [
+    {
+      "id": "./node_modules/core-js/library/modules/_collection-to-json.js",
+      "name": "./node_modules/core-js/library/modules/_collection-to-json.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_collection": [
+    {
+      "id": "./node_modules/core-js/library/modules/_collection.js",
+      "name": "./node_modules/core-js/library/modules/_collection.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_create-property": [
+    {
+      "id": "./node_modules/core-js/library/modules/_create-property.js",
+      "name": "./node_modules/core-js/library/modules/_create-property.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_set-collection-from": [
+    {
+      "id": "./node_modules/core-js/library/modules/_set-collection-from.js",
+      "name": "./node_modules/core-js/library/modules/_set-collection-from.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_set-collection-of": [
+    {
+      "id": "./node_modules/core-js/library/modules/_set-collection-of.js",
+      "name": "./node_modules/core-js/library/modules/_set-collection-of.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./_validate-collection": [
+    {
+      "id": "./node_modules/core-js/library/modules/_validate-collection.js",
+      "name": "./node_modules/core-js/library/modules/_validate-collection.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../modules/core.is-iterable": [
+    {
+      "id": "./node_modules/core-js/library/modules/core.is-iterable.js",
+      "name": "./node_modules/core-js/library/modules/core.is-iterable.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../../modules/es6.array.from": [
+    {
+      "id": "./node_modules/core-js/library/modules/es6.array.from.js",
+      "name": "./node_modules/core-js/library/modules/es6.array.from.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../modules/es6.set": [
+    {
+      "id": "./node_modules/core-js/library/modules/es6.set.js",
+      "name": "./node_modules/core-js/library/modules/es6.set.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../modules/es7.set.from": [
+    {
+      "id": "./node_modules/core-js/library/modules/es7.set.from.js",
+      "name": "./node_modules/core-js/library/modules/es7.set.from.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../modules/es7.set.of": [
+    {
+      "id": "./node_modules/core-js/library/modules/es7.set.of.js",
+      "name": "./node_modules/core-js/library/modules/es7.set.of.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../modules/es7.set.to-json": [
+    {
+      "id": "./node_modules/core-js/library/modules/es7.set.to-json.js",
+      "name": "./node_modules/core-js/library/modules/es7.set.to-json.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "next-server/dist/lib/head-manager-context": [
+    {
+      "id": "./node_modules/next-server/dist/lib/head-manager-context.js",
+      "name": "./node_modules/next-server/dist/lib/head-manager-context.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./dist/lib/head": [
+    {
+      "id": "./node_modules/next-server/dist/lib/head.js",
+      "name": "./node_modules/next-server/dist/lib/head.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./side-effect": [
+    {
+      "id": "./node_modules/next-server/dist/lib/side-effect.js",
+      "name": "./node_modules/next-server/dist/lib/side-effect.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "next-server/head": [
+    {
+      "id": "./node_modules/next-server/head.js",
+      "name": "./node_modules/next-server/head.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./myHead": [
+    {
+      "id": "./pages/myHead.js",
+      "name": "./pages/myHead.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../styles/NStyles.scss": [
+    {
+      "id": "./styles/NStyles.scss",
+      "name": "./styles/NStyles.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": 3,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
   ]
 }
