@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "live-server": "^1.2.1",
     "razzle": "^2.4.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
