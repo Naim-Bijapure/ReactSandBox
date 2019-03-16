@@ -1,18 +1,12 @@
-import ReactDOM from 'react-dom'
 import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App/>,document.getElementById("app"));
-if (module.hot) {
-  module.hot.dispose(function() {
-    // module is about to be replaced
-    console.log('dispose ');
-    
-  })
+ReactDOM.render(<App />, document.getElementById('root'));
 
-  module.hot.accept(function() {
-    // module or one of its dependencies was just updated
-
-    console.log('hot reloding ');
-  })
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
