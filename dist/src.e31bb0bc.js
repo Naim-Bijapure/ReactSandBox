@@ -63614,7 +63614,7 @@ function Home() {
   (0, _react.useEffect)(function () {
     db.onSnapshot(getnData);
     console.log(nDataArr);
-  });
+  }, [setnDataArr]);
   return _react.default.createElement("div", null, _react.default.createElement("form", {
     className: "card"
   }, _react.default.createElement("div", {
@@ -63778,7 +63778,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35879" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39773" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

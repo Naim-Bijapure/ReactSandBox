@@ -35,7 +35,7 @@ let db=firebase.firestore().collection("N");
        
             
                
- }) 
+ },[setnDataArr]) 
 
 
  
