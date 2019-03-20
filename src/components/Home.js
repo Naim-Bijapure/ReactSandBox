@@ -13,29 +13,30 @@ export default function Home(){
 function getnData(query) {
           query.forEach((data)=>{
           nDataArr.push(data.data())
-            
+          setnDataArr(nDataArr);            
           }); 
-          console.log(nDataArr);
           
 }
 function Add() {
 
   
   nDataArr.push({name:"clicked",nickname:'by add'}); 
-  console.log(nDataArr);
-  
+   setnDataArr(nDataArr);
+   console.log(nDataArr);
+   
 }
 
-let db=firebase.firestore().collection("N");
 
 
-  useEffect(() => {
+useEffect(() => {
+  let db=firebase.firestore().collection("N");
              db.onSnapshot( getnData );
       console.log(nDataArr);
-       
+       console.log('running ');
+        
             
                
- },[setnDataArr]) 
+ }) 
 
 
  

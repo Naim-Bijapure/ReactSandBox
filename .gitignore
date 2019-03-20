@@ -8,13 +8,14 @@ node_modules/
 /.pnp
 .pnp.js
 dist
+.cache
+/.cache
 # testing
 /coverage
 
 # production
 /build
-.cache
-/.cache
+
 # misc
 .env
 .DS_Store

@@ -63597,8 +63597,8 @@ function Home() {
   function getnData(query) {
     query.forEach(function (data) {
       nDataArr.push(data.data());
+      setnDataArr(nDataArr);
     });
-    console.log(nDataArr);
   }
 
   function Add() {
@@ -63606,15 +63606,17 @@ function Home() {
       name: "clicked",
       nickname: 'by add'
     });
+    setnDataArr(nDataArr);
     console.log(nDataArr);
   }
 
-  var db = _Firebase.default.firestore().collection("N");
-
   (0, _react.useEffect)(function () {
+    var db = _Firebase.default.firestore().collection("N");
+
     db.onSnapshot(getnData);
     console.log(nDataArr);
-  }, [setnDataArr]);
+    console.log('running ');
+  });
   return _react.default.createElement("div", null, _react.default.createElement("form", {
     className: "card"
   }, _react.default.createElement("div", {
@@ -63778,7 +63780,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39773" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33171" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
