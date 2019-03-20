@@ -10,6 +10,7 @@ node_modules/
 dist
 .cache
 /.cache
+/.vscode
 # testing
 /coverage
 
