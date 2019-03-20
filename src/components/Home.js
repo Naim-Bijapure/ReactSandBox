@@ -1,9 +1,85 @@
-import React, { Component } from 'react'
+import React, { Component,useState,useEffect } from 'react'
 import {Link} from 'react-router-dom'
- export function Home(){
-   return (
+import firebase from '../Firebase'
+
+
+
+export default function Home(){
+  
+  const [nData, setnData] = useState({name:"defalutl",nickname:'default'})
+  const [nDataArr, setnDataArr] = useState([nData])
+    
+
+function getnData(query) {
+          query.forEach((data)=>{
+          nDataArr.push(data.data())
+            
+          }); 
+          console.log(nDataArr);
+          
+}
+function Add() {
+
+  
+  nDataArr.push({name:"clicked",nickname:'by add'}); 
+  console.log(nDataArr);
+  
+}
+
+let db=firebase.firestore().collection("N");
+
+
+  useEffect(() => {
+             db.onSnapshot( getnData );
+      console.log(nDataArr);
+       
+            
+               
+ }) 
+
+
+ 
+  return (
+    
        <div>
-           home working 
+          <form className="card" >
+           <div className="form-group  card-body"> 
+           
+            <input type="text" className="form-control" placeholder="enter name"/>
+            <input type="text" className="form-control" placeholder="enter nickname"/>
+           
+           </div> 
+           </form> 
+           <button className="btn btn-primary" onClick={Add}>Add</button>
+           <button className="btn btn-danger">Delete</button>
+           <button className="btn btn-info">Update</button>
+
+  <table className="table">
+
+  <thead className="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Nickname</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+     {
+       nDataArr.map((data,i)=>{
+         return(
+           <tr key={i}>
+             <td>{data.name}</td>
+             <td>{data.nickname}</td>
+
+           </tr>
+         )
+       })
+     } 
+  </tbody>
+</table>
+          
+
        </div>
         );
  }

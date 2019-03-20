@@ -63560,7 +63560,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Home;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -63572,78 +63572,82 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+function Home() {
+  var _useState = (0, _react.useState)({
+    name: "defalutl",
+    nickname: 'default'
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      nData = _useState2[0],
+      setnData = _useState2[1];
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+  var _useState3 = (0, _react.useState)([nData]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      nDataArr = _useState4[0],
+      setnDataArr = _useState4[1];
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var Home =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Home, _Component);
-
-  function Home(props) {
-    var _this;
-
-    _classCallCheck(this, Home);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
-    _this.db = _Firebase.default.firestore();
-    _this.unsub = null;
-    return _this;
+  function getnData(query) {
+    query.forEach(function (data) {
+      nDataArr.push(data.data());
+    });
+    console.log(nDataArr);
   }
 
-  _createClass(Home, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {}
-  }, {
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("form", {
-        className: "form-group"
-      }, _react.default.createElement("div", {
-        className: "card"
-      }, _react.default.createElement("div", {
-        className: "card-body"
-      }, _react.default.createElement("label", null, "Enter Name"), _react.default.createElement("input", {
-        type: "text",
-        className: "form-control",
-        placeholder: "Name"
-      }), _react.default.createElement("label", null, "Enter nickName"), _react.default.createElement("input", {
-        type: "text",
-        className: "form-control",
-        placeholder: "nickName"
-      }))), _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement("div", {
-        className: "row"
-      }, _react.default.createElement("button", {
-        className: "btn btn-primary col-sm "
-      }, "Add"), _react.default.createElement("button", {
-        className: "btn btn-info col-sm"
-      }, "Update"), _react.default.createElement("button", {
-        className: "btn btn-danger col-sm"
-      }, "Delete")))));
-    }
-  }]);
+  function Add() {
+    nDataArr.push({
+      name: "clicked",
+      nickname: 'by add'
+    });
+    console.log(nDataArr);
+  }
 
-  return Home;
-}(_react.Component);
+  var db = _Firebase.default.firestore().collection("N");
 
-exports.default = Home;
+  (0, _react.useEffect)(function () {
+    db.onSnapshot(getnData);
+    console.log(nDataArr);
+  });
+  return _react.default.createElement("div", null, _react.default.createElement("form", {
+    className: "card"
+  }, _react.default.createElement("div", {
+    className: "form-group  card-body"
+  }, _react.default.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "enter name"
+  }), _react.default.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "enter nickname"
+  }))), _react.default.createElement("button", {
+    className: "btn btn-primary",
+    onClick: Add
+  }, "Add"), _react.default.createElement("button", {
+    className: "btn btn-danger"
+  }, "Delete"), _react.default.createElement("button", {
+    className: "btn btn-info"
+  }, "Update"), _react.default.createElement("table", {
+    className: "table"
+  }, _react.default.createElement("thead", {
+    className: "thead-dark"
+  }, _react.default.createElement("tr", null, _react.default.createElement("th", {
+    scope: "col"
+  }, "Name"), _react.default.createElement("th", {
+    scope: "col"
+  }, "Nickname"))), _react.default.createElement("tbody", null, nDataArr.map(function (data, i) {
+    return _react.default.createElement("tr", {
+      key: i
+    }, _react.default.createElement("td", null, data.name), _react.default.createElement("td", null, data.nickname));
+  }))));
+}
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../Firebase":"Firebase.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
@@ -63774,7 +63778,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44831" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35879" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
