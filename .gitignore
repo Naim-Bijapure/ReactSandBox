@@ -2,9 +2,14 @@
 
 # dependencies
 /node_modules
+
+node_modules/
+.vscode
 /.pnp
 .pnp.js
-
+dist
+.cache
+/.cache
 # testing
 /coverage
 
@@ -12,6 +17,7 @@
 /build
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
