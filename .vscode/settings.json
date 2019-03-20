@@ -1,0 +1,8 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "files.associations": {
+        "*.js":"javascriptreact"
+    }
+
+
+}
