@@ -13,7 +13,8 @@ dist
 
 # production
 /build
-
+.cache
+/.cache
 # misc
 .env
 .DS_Store
