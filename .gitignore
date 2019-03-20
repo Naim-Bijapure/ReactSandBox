@@ -4,10 +4,10 @@
 /node_modules
 
 node_modules/
-/.vscode
+.vscode
 /.pnp
 .pnp.js
-/dist
+dist
 # testing
 /coverage
 
