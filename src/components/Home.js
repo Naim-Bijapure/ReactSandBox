@@ -1,4 +1,4 @@
-import React, { Component,useState,useEffect } from 'react'
+import React, { Component,useState,useEffect,useCallback,useRef } from 'react'
 import {Link} from 'react-router-dom'
 import firebase from '../Firebase'
 
@@ -6,48 +6,58 @@ import firebase from '../Firebase'
 
 export default function Home(){
   
-  const [nData, setnData] = useState({name:"defalutl",nickname:'default'})
-  const [nDataArr, setnDataArr] = useState([nData])
-    
-
-function getnData(query) {
-          query.forEach((data)=>{
-          nDataArr.push(data.data())
-          setnDataArr(nDataArr);            
-          }); 
-          
-}
-function Add() {
+  const [nData, setnData] = useState({name:"default Name",nickname:'default nickname'})
+  const [nDataArr, setnDataArr] = useState([nData]);
+  const refName = useRef("defalut ref Name");
+  const refnickName=useRef("defalutl ref Nick Name");
 
   
-  nDataArr.push({name:"clicked",nickname:'by add'}); 
-   setnDataArr(nDataArr);
-   console.log(nDataArr);
-   
+  let db= firebase.firestore().collection("N");
+
+  useEffect(() => {
+             console.log('called at first time ');
+              getnData();
+      },[nData]) 
+            
+ 
+
+function getnData() {
+      db.onSnapshot((querySnapShot)=>{
+        let dataarr= [];
+           querySnapShot.forEach((doc)=>{
+      //  console.log('getnData',doc.data());
+      
+                       dataarr.push(doc.data());
+                      });
+                      setnDataArr(dataarr);
+                       
+                       
+             }) ; 
 }
 
 
+function Add() {
+    db.add({name:refName.current.value,nickname:refnickName.current.value})
+    .then(()=>{console.log('data added ');
+    }).catch(()=>{console.log('error');
+    });
+  }
 
-useEffect(() => {
-  let db=firebase.firestore().collection("N");
-             db.onSnapshot( getnData );
-      console.log(nDataArr);
-       console.log('running ');
-        
-            
-               
- }) 
+function getData(e,nickname) {
+    // setnData({name:name,nickname:nickname}); 
+    
+}
 
 
  
   return (
-    
        <div>
-          <form className="card" >
+         {console.log('render')}
+            <form className="card" >
            <div className="form-group  card-body"> 
            
-            <input type="text" className="form-control" placeholder="enter name"/>
-            <input type="text" className="form-control" placeholder="enter nickname"/>
+            <input type="text" className="form-control" ref={refName} placeholder="enter name"/>
+            <input type="text" className="form-control" ref={refnickName} placeholder="enter nickname"/>
            
            </div> 
            </form> 

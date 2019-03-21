@@ -63582,8 +63582,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Home() {
   var _useState = (0, _react.useState)({
-    name: "defalutl",
-    nickname: 'default'
+    name: "default Name",
+    nickname: 'default nickname'
   }),
       _useState2 = _slicedToArray(_useState, 2),
       nData = _useState2[0],
@@ -63594,40 +63594,54 @@ function Home() {
       nDataArr = _useState4[0],
       setnDataArr = _useState4[1];
 
-  function getnData(query) {
-    query.forEach(function (data) {
-      nDataArr.push(data.data());
-      setnDataArr(nDataArr);
+  var refName = (0, _react.useRef)("defalut ref Name");
+  var refnickName = (0, _react.useRef)("defalutl ref Nick Name");
+
+  var db = _Firebase.default.firestore().collection("N");
+
+  (0, _react.useEffect)(function () {
+    console.log('called at first time ');
+    getnData();
+  }, [nData]);
+
+  function getnData() {
+    db.onSnapshot(function (querySnapShot) {
+      var dataarr = [];
+      querySnapShot.forEach(function (doc) {
+        //  console.log('getnData',doc.data());
+        dataarr.push(doc.data());
+      });
+      setnDataArr(dataarr);
     });
   }
 
   function Add() {
-    nDataArr.push({
-      name: "clicked",
-      nickname: 'by add'
+    db.add({
+      name: refName.current.value,
+      nickname: refnickName.current.value
+    }).then(function () {
+      console.log('data added ');
+    }).catch(function () {
+      console.log('error');
     });
-    setnDataArr(nDataArr);
-    console.log(nDataArr);
   }
 
-  (0, _react.useEffect)(function () {
-    var db = _Firebase.default.firestore().collection("N");
+  function getData(e, nickname) {// setnData({name:name,nickname:nickname}); 
+  }
 
-    db.onSnapshot(getnData);
-    console.log(nDataArr);
-    console.log('running ');
-  });
-  return _react.default.createElement("div", null, _react.default.createElement("form", {
+  return _react.default.createElement("div", null, console.log('render'), _react.default.createElement("form", {
     className: "card"
   }, _react.default.createElement("div", {
     className: "form-group  card-body"
   }, _react.default.createElement("input", {
     type: "text",
     className: "form-control",
+    ref: refName,
     placeholder: "enter name"
   }), _react.default.createElement("input", {
     type: "text",
     className: "form-control",
+    ref: refnickName,
     placeholder: "enter nickname"
   }))), _react.default.createElement("button", {
     className: "btn btn-primary",
@@ -63780,7 +63794,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40987" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
