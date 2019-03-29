@@ -5,6 +5,7 @@ import { Edit } from './components/edit';
 import { Create } from './components/create';
 import { Show } from './components/show';
 import Home from './components/Home';
+import N from './components/N';
 
 export default class App extends Component {
     render(){
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Route path='/edit/:id' component={Edit} />
         <Route path='/create' component={Create} />
         <Route path='/show/:id' component={Show} />
+        <Route path='/N' component={N} />
       </div>
       </Router>
 

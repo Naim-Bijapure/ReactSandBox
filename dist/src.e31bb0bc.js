@@ -63664,7 +63664,87 @@ function Home() {
     }, _react.default.createElement("td", null, data.name), _react.default.createElement("td", null, data.nickname));
   }))));
 }
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../Firebase":"Firebase.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../Firebase":"Firebase.js"}],"components/N.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var N =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(N, _Component);
+
+  function N(props) {
+    var _this;
+
+    _classCallCheck(this, N);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(N).call(this, props));
+    _this.run2 = _this.run.bind(_assertThisInitialized(_this));
+    _this.state = {
+      search: ''
+    };
+    return _this;
+  }
+
+  _createClass(N, [{
+    key: "run",
+    value: function run() {
+      alert('called run');
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      //   clearTimeout(this.timeout); 
+      var ee = e.target.value;
+      this.timeout = setTimeout(function () {
+        console.log('called handle change', e.target.value);
+      }, 2500);
+      console.log(e.target.value);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log('rendered');
+      return _react.default.createElement("div", null, "hello Naim", _react.default.createElement("input", {
+        type: "text",
+        onChange: this.handleChange.bind(this)
+      }), _react.default.createElement("button", {
+        onClick: this.run2
+      }, "click 1"));
+    }
+  }]);
+
+  return N;
+}(_react.Component);
+
+exports.default = N;
+},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63685,6 +63765,8 @@ var _create = require("./components/create");
 var _show = require("./components/show");
 
 var _Home = _interopRequireDefault(require("./components/Home"));
+
+var _N = _interopRequireDefault(require("./components/N"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63735,6 +63817,9 @@ function (_Component) {
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/show/:id",
         component: _show.Show
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/N",
+        component: _N.default
       })));
     }
   }]);
@@ -63743,7 +63828,7 @@ function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","./components/edit":"components/edit.js","./components/create":"components/create.js","./components/show":"components/show.js","./components/Home":"components/Home.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","./components/edit":"components/edit.js","./components/create":"components/create.js","./components/show":"components/show.js","./components/Home":"components/Home.js","./components/N":"components/N.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
@@ -63794,7 +63879,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40987" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34289" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
