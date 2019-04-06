@@ -63542,12 +63542,12 @@ var _firestore = _interopRequireDefault(require("firebase/firestore"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var config = {
-  apiKey: "AIzaSyDb-5LZZ_jWLBxjfSHWlNyo-U-j5rbYtRo",
-  authDomain: "react-firebase-6a1fa.firebaseapp.com",
-  databaseURL: "https://react-firebase-6a1fa.firebaseio.com",
-  projectId: "react-firebase-6a1fa",
-  storageBucket: "react-firebase-6a1fa.appspot.com",
-  messagingSenderId: "717139748227"
+  apiKey: undefined,
+  authDomain: undefined,
+  databaseURL: undefined,
+  projectId: undefined,
+  storageBucket: undefined,
+  messagingSenderId: undefined
 };
 
 _app.default.initializeApp(config);
@@ -63780,7 +63780,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
